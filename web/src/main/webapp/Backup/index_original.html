@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" >
+
+<title>Affection</title>
+
+<style type="text/css">
+
+body
+{background-color:#E0E0E0;}
+
+/*連結底色*/
+a,a:link,a:visited{color: black;}
+a:hover{color:red;}
+
+/*首頁*/
+.main{
+width:100%;
+height:100%;
+background-image: url("img/logo_ok.png");
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center center;
+z-index:1;
+position:absolute;
+top:0%;
+bottom:0%;
+right:0%;
+left:0%; 
+margin:0%;
+opacity:1; 
+}
+
+.content{
+margin:6% auto;
+opacity:1; 
+}
+
+.slide{
+width:60%;
+height:60%;
+display:flex;
+flex-direction: row;
+position:absolute;
+left:21.5%;
+top:25%;
+opacity:1; 
+background-image: url("img/baby1.jpg");
+background-size:cover;
+background-repeat: no-repeat;
+background-position:center center;
+box-shadow: 10px 15px 10px #7D7D7D;
+ transition: all 1s;
+}
+
+
+.slide:hover {
+  transform: scale(1.2,1.2);
+   transition: all 1s;
+}
+
+/*功能列*/
+
+.function {
+	width:99.87%;
+	height:80px;
+	float: right;
+	background-color: #9D9D9D;
+	opacity: 0.5;
+	position: fixed;
+	top:0%;
+	left:0%;
+	color:black;
+	font-size:2em; 
+	transition: all 2s;
+	margin:0%;
+	background: linear-gradient(180deg, #9D9D9D 0%, #E0E0E0 100%);
+	box-shadow:8px 8px 10px #999;
+	z-index:2;
+	border-radius: 0 0 50% 50%;
+	
+}
+
+.function:hover {
+   opacity: 1.0;
+   transition: all 1s;
+}
+
+
+.menber{
+position:relative;
+left:-10%;
+width:50%;
+height:100%;
+margin:1% auto;
+padding:0%;
+
+}
+
+.Login-button{
+float:right;
+font-size:1em;
+transition: all 1s;
+margin-right:3%;
+cursor: pointer;
+}
+
+.Register-button{
+float:right;
+font-size:1em;
+transition: all 1s;
+margin-right:3%;
+cursor: pointer;
+}
+
+
+.Login-button:hover{
+color:red;
+font-size:1.5em;
+transition: all 1s;
+
+}
+.Register-button:hover{
+color:red;
+font-size:1.5em;
+transition: all 1s;
+
+}
+
+.MemberCenter{
+float:right;
+font-size:1em;
+transition: all 1s;
+margin-right:3%;
+cursor: pointer;
+}
+
+.MemberCenter:hover{
+color:red;
+font-size:1.5em;
+transition: all 1s;
+
+}
+
+.Donate{
+float:right;
+font-size:1em;
+transition: all 1s;
+margin-right:3%;
+cursor: pointer;
+}
+
+.Donate:hover{
+color:red;
+font-size:1.5em;
+transition: all 1s;
+}
+
+/*資訊欄*/
+
+
+.information{
+width:100%;
+height:4.5%;
+color:white;
+text-align: center;
+position:fixed;
+bottom:0% ;
+left:0%;
+font-size: 1.5em;
+z-index:3;
+background: linear-gradient(180deg, #E0E0E0 0%, black 100%);
+margin:0 0 0 0 ;
+border-radius: 50% 50% 0 0;
+font-family:Arial,"微軟正黑體" , "Microsoft JhengHei","仿宋_GB2312","FangSong_GB2312, PingFang" ;
+}
+
+.information_head{
+font-size: 1.5em;
+text-transform:capitalize;
+cursor:pointer ;
+}
+
+.information_head:hover{
+color:red;
+transition: all 1s;
+
+}
+
+
+.logo{
+margin-left:0;
+position:relative;
+top:-10%;
+right:0.3%;
+max-height: 100px;
+max-width: 500px; 
+float:right;
+z-index:5;
+transition: all 1s;
+
+}
+
+.logo:hover{
+	opacity: 1;
+	transform: scale(1.5,1.5);
+	transition: all 1s;
+}
+
+/*驗證碼*/
+.captchaImg{
+margin:0 0 0 0;
+position:relative;
+top:4px;
+left:5px; 
+cursor: pointer;
+}
+
+
+/*註冊*/
+.register {
+	width: 20%;
+	height: 75%;
+	background: linear-gradient(180deg, #5B5B5B 0%, #E0E0E0 100%);
+	/*border: 1px solid black;*/
+	border-radius: 20px;
+	margin: 5% 40%;
+	z-index: 3;
+	display: none;
+	position: fixed;
+	opacity:1;
+	
+
+	}
+
+.register_1 {
+	width: 95%;
+	height: 98.5%;
+	background:linear-gradient(180deg, #9D9D9D 0%, #E0E0E0 100%);
+	/*border: 1px solid black;*/
+	border-radius: 20px;
+	margin: 1% auto;
+	
+}
+
+.register_2 {
+	margin: 3% 3% 3% 3%;
+	font-size: 1.5em
+}
+
+.gender {
+	font-size: 0.7em;
+}
+
+.submit_1 {
+	width: 10px;
+	height: 10px;
+	margin: 0% 0% 0% 40%;
+}
+
+
+
+/*登入*/
+.outer {
+	width: 20%;
+	height: 32%;
+	background: linear-gradient(180deg, #5B5B5B 0%, #E0E0E0 100%);
+	/*border: 1px solid black;*/
+	border-radius: 25px;
+	margin: 10% 40%;
+	position: fixed;
+	display: none;
+	z-index: 3;
+	opacity: 1;
+}
+
+
+
+.login {
+	width: 95%;
+	height: 96%;
+	background:linear-gradient(180deg, #9D9D9D 0%, #E0E0E0 100%);
+	/*border: 1px solid black;*/
+	border-radius: 25px;
+	margin: 1% auto;
+	
+}
+
+.login_1 {
+	margin: 3% 3% 3% 3%;
+	font-size: 1.5em
+}
+
+.submit_login {
+	text-align: center;
+	font-size: 0.8em;
+	margin:6% auto;
+}
+
+.href_forgotPassword {
+	font-size: 0.7em;
+}
+
+.back_1 {
+	width: 100%;
+	height: 100%;
+	background: black;
+	position: static;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	margin: 0;
+	opacity: 1;
+	z-index: -1;
+}
+
+@media screen and (max-width: 720px){
+	.function {
+	width:22%;
+	height:90.5%;
+	float: right;
+	background-color: #9D9D9D;
+	opacity: 0.5;
+	position: fixed;
+	top:0%;
+	left:0.1%;
+	color:black;
+	font-size:2em; 
+	transition: all 2s;
+	margin:0%;
+	z-index:2;
+	display:flex;
+	flex-direction: column-reverse;
+	border-radius: 0 10% 30% 30% ;
+	
+}
+
+.menber{
+margin:0 0 0 55%;
+font-size:0.7em;
+}
+
+.logo{
+margin:0%;
+position:relative;
+left:-25%;
+width:50%;
+height:100%;
+
+
+}
+
+.content{
+flex-direction: column;
+}
+
+.outer {
+	width: 50%;
+	height: 29%;
+	margin: 5% 40%;
+	position: fixed;
+	display: none;
+	z-index: 3;
+	opacity: 1;
+	font-size: 0.9em
+}
+
+.register {
+	width: 50%;
+	height: 73%;
+	margin: 0% 40%;
+	z-index: 3;
+	display: none;
+	position: fixed;
+	font-size: 0.9em
+
+	}
+
+.content{
+margin:5.5% 10% 5.5% 25%;
+}
+
+
+.information{
+z-index:3;
+font-size:1.2em; 
+}
+
+.slide{
+margin:-10% 0 0 8%;
+}
+
+
+
+/*TODO slide 排列改成直式*/
+
+
+
+}
+
+</style>
+
+<!-- JQ -->
+		<!--從網路載入JQ-->
+<script 
+src="https://code.jquery.com/jquery-3.0.0.js" 
+integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" 
+crossorigin="anonymous"></script>   
+<!-- <script type="text/javascript" src="jquery.js">  從本機載入JQ</script> -->
+<script type="text/javascript">
+	$(document).ready(init);
+	function init() {
+		/*登入註冊彈出視窗*/
+		$(".Login-button").click(inHandler);
+		$(".Register-button").click(outHandler);
+		$(".main").click(allHandler);
+		/*顯示密碼*/
+		$(".show").mousedown(downHandler);  
+		$(".show").mouseup(upHandler);
+		$("div").mouseleave(upHandler);
+		/*更新驗證碼*/
+		$(".captchaImg").click(refresh);
+		/*hover information*/
+		$(".information_head").click(pullout);
+		$(".main").click(pushin);
+		/*TODO　首頁滑動投影片*/
+
+
+		
+	}
+	function inHandler() {
+		$(".register").fadeOut();
+		$(".outer").slideDown(800);
+	}
+	function outHandler() {
+		$(".outer").fadeOut();
+		$(".register").slideDown(800);
+	}
+	
+	function allHandler() {
+		$(".outer").fadeOut(800);
+		$(".register").fadeOut(800);
+	}
+	
+	
+	function downHandler() {
+		$(".password").attr("type", "text");
+	}
+	function upHandler() {
+		$(".password").attr("type", "password");
+	}
+
+	function refresh() {
+		$(".captchaImg").attr("src", "images/captcha.jpg?"+new Date().getTime());
+		
+		//var captcha = document.getElementsByClassName("captchaImg");
+		//captcha[0].src = "images/captcha.jpg?abc=" + new Date().getTime();
+	}
+	
+	function pullout(){
+		$(".information").animate({"height":"15%","opacity":0.9},1000)
+		
+	}
+	function pushin(){
+		$(".information").animate({"height":"4.5%","opacity":1},1000)
+		
+	}
+	
+</script>
+
+
+</head>
+<body>
+
+<!-- 功能列 -->
+<div class="function">
+<a href="/Affection"><img src="img/logo_ok.png" class="logo"></a>
+<div class="menber">
+<span class="Login-button" >Login</span>
+<span class="Register-button" >Register</span>
+<a href="/Affection/donate.html" visited{color: white;}><span class="Donate" >Donate</span></a>
+<a href="/Affection/memberCenter.html"><span class="MemberCenter" href="/Affection/donate.html">M.Center</span></a>
+
+</div>
+
+
+</div>
+
+
+
+
+<!-- 登入 -->
+	<div class="outer">
+		<div class="login">			<!-- post提出表單(不跨網) get查詢資料(跨網) -->
+			<form class="login_1" action="login.do" method="post">
+				Account<br> <input type="text" name="login_id" class="id" 
+				required placeholder="Please enter the ID"> <br> 
+				Password<br>
+				<input type="password" class="password"  name="login_password"
+				required placeholder="Please enter the Password">
+				 <input type="button" class="show" value="show">
+				<div class="href_forgotPassword">
+					<!-- 連結到忘記密碼網頁 -->
+					<a href="忘記密碼">Forgot your password</a>
+				</div>
+				Captcha<br>
+				<input type="text"name="login_captcha">
+				<img class='captchaImg' src='images/captcha.jpg' title="Click to refresh">
+				<div class="submit_login" value="OK">
+					<input type="submit" value="Login">
+				</div>
+
+			</form>
+		</div>
+	</div>
+
+
+
+<!-- 註冊 -->
+	<div class="register" id="register" >
+		<div class="register_1">
+			<form class="register_2" action="register.do" method="post">
+				Account<br> 
+				<input type="text" id="id" name="id" pattern='[A-Z][1289]\d{8}'
+				required placeholder="Please enter the ID"></input> <br>
+				Password<br> 
+				<input type="password" class="password" name="password"
+				maxlength="20" minlength='6'
+				required placeholder="Please enter the Password"></input>
+				<input type="button" class="show" value="show"> <br>
+				Confirm Password<br>
+				<input type="password" class="password" name="confirm_password"
+				maxlength="20" minlength='6'
+				required placeholder="Please confirm the Password"></input><br>
+				Name<br> 
+				<input type="text" id="name" name="name"
+				minlength='2' maxlength="20"
+				required placeholder="Please enter the Name"></input> <br> 
+				E-mail<br>
+				<input type="email" id="eamil" name="email"
+				required placeholder="Please enter the Email"></input> <br> 
+				Gender<br>
+				<div class="gender" name="gender">
+					<input type="radio" name="gender" value="M">Male</input> 
+					<input type="radio" name="gender" value="F">Female</input>
+					<input type="radio" name="gender" value="S">Secret</input>
+				</div>
+				Birthday<br> 
+				<input type="date" id="birthday" name="birthday"
+				required placeholder="Please enter the Birthday"></input> <br>
+				Phone<br> 
+				<input type="text" id="phone" name="phone"
+				required placeholder="Please enter the Phone"></input> <br>
+				Address<br>
+				 <input type="text" id="address" name="address"></input> <br>
+				<input type="checkbox" id="yes" value="true" name="subcribe"></input>Subscribe 
+				<br>
+				Captcha<br>
+				<input type="text"name="captcha">				<!-- register用驗證碼 function 也要改成兩個-->
+																<!-- images/register_captcha.jpg -->
+				<img class='captchaImg' src='images/captcha.jpg' title="Click to refresh">
+				
+				<br>
+				<div class="submit_1">
+					<input type="submit"  value="OK" >
+				</div>
+			</form>
+		</div>
+
+
+</div>
+
+
+<!-- 首頁  -->
+<div class="main">
+<div class="content">
+<div class="slide">
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<!-- 資訊欄 -->
+<div class="information">
+<div class="information_head">Imformation</div>
+<div>
+<span>連絡電話:02-25149191</span><span> 地址:台北市松山區復興北路99號</span><br> 
+<span>勸募字號:台內團字第0000000000號</span><span> 立案字號:衛部救字第0000000000號</span><br>
+<span>Copyright ©2021 Affection</span>
+</div>
+</div>
+
+
+</body>
+</html>

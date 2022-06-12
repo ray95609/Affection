@@ -1,0 +1,658 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap');
+
+body{background-color: 	#FCFCFC;
+font-family:Arial,"微軟正黑體" , "Microsoft JhengHei","仿宋_GB2312","FangSong_GB2312, PingFang" ;
+
+}
+
+/*連結底色*/
+a,a:link,a:visited{
+	color: black;
+ 	text-decoration:none;
+ }
+
+/*ul*/
+ul{list-style-type:none; 
+   display: inline-block;
+   line-height:1; 
+   font-size:1em;
+}
+li{list-style-type:none;
+   display: inline-block;
+	line-height:1; 
+	font-size:1em;
+
+   }
+/*首頁*/
+.main{
+width:100%;
+height:100vh;
+background-image: url("img/logo_ok.png");
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center center;
+z-index:1;
+position:absolute;
+top:0%;
+bottom:0%;
+right:0%;
+left:0%; 
+margin:0%;
+opacity:1; 
+}
+
+.main img{
+		object-fit:cover;
+			}
+
+.slide{
+width:100%;
+height:100%;
+display:flex;
+position:absolute;
+opacity:1; 
+margin:0% 0 0 0 ;
+box-shadow: 10px 15px 10px #7D7D7D;
+transition: all 1s;
+opacity:0.9; 
+}
+
+/*功能列*/
+
+.function {
+	width:99.87%;
+	height:80px;
+	float: right;
+	background-color: #9D9D9D;
+	opacity: 0.5;
+	position: fixed;
+	top:0%;
+	left:0%;
+	color:black;
+	font-size:2em; 
+	transition: all 2s;
+	margin:0%;
+	background: linear-gradient(180deg, #9D9D9D 0%, #E0E0E0 100%);
+	box-shadow:8px 8px 10px #999;
+	z-index:2;
+	border-radius: 0 0 50% 50%;
+	font-family: 'Gluten', cursive;
+	
+}
+
+.function:hover {
+   opacity: 1.0;
+   transition: all 1s;
+}
+
+
+.menber{
+position:fixed;
+left:15%;
+width:50%;
+height:80px;
+margin:1% auto;
+padding:0%;
+text-align: center;
+}
+
+.Login-button{
+float:right;
+font-size:1em;
+transition: all 1s;
+margin-right:3%;
+cursor: pointer;
+}
+
+.login_faild{
+color:red;
+position:relative;
+left:0%; 
+text-align:right;
+}
+
+.register_faild{
+position:inherit;
+text-align:right;
+height:100px;
+color:red;
+left:-10%; 
+padding:0%;
+margin:0%;
+
+}
+
+
+
+.Register-button{
+float:right;
+font-size:1em;
+transition: all 1s;
+margin-right:3%;
+cursor: pointer;
+}
+
+
+.MemberCenter{
+float:right;
+font-size:1em;
+transition: all 1s;
+margin-right:3%;
+cursor: pointer;
+}
+
+.MemberCenter:hover{
+color:red;
+font-size:1.5em;
+transition: all 1s;
+
+}
+
+
+.Donate{
+float:right;
+font-size:1em;
+transition: all 1s;
+margin-right:30%;
+cursor: pointer;
+}
+
+.ok{
+position:relative;
+margin:0 auto;
+top:-5%;
+left:55%;
+}
+
+.member_icon{
+	position:fixed;
+	width:50px;
+	height:50px;
+	background-color: black;
+	border-radius: 50% 50% 50% 50%;
+	color:white;
+	text-align: center;
+	right:15%;
+	top:1%;
+	transition: all 1s;
+	z-index:5; 
+	font-family:"微軟正黑體" , "Microsoft JhengHei","仿宋_GB2312","FangSong_GB2312, PingFang";
+}
+
+.member_icon:hover{
+text-align: center;
+scale:1.1;
+background-color:#FF9224;
+ 
+}
+
+.logout img{
+	width:50px;
+	height:50px;
+	position:fixed;
+	right:17.5%;
+	top:1%;
+	z-index:5; 
+	display:none;
+			
+}
+
+
+/*資訊欄*/
+
+
+.information{
+width:100%;
+height:4.5%;
+color:white;
+text-align: center;
+position:fixed;
+bottom:0% ;
+left:0%;
+z-index:3;
+background: linear-gradient(180deg, #E0E0E0 0%, black 100%);
+margin:0 0 0 0 ;
+border-radius: 50% 50% 0 0;
+font-size: 1.3em;
+font-family:'Gluten', cursive,"微軟正黑體" , "Microsoft JhengHei","仿宋_GB2312","FangSong_GB2312, PingFang" ;
+}
+
+.information_head{
+font-size: 2em;
+margin:0 0 5px 0;
+text-transform:capitalize;
+cursor:pointer ;
+}
+
+.information_head:hover{
+color:red;
+transition: all 1s;
+
+}
+
+
+.logo{
+margin-left:0;
+position:relative;
+top:-20%;
+right:8%;
+max-height: 100px;
+max-width: 500px; 
+float:right;
+z-index:5;
+transition: all 1s;
+
+}
+
+.logo:hover{
+	opacity: 1;
+	transform: scale(1.2,1.2);
+	transition: all 1s;
+}
+
+
+
+/*驗證碼*/
+.captchaImg{
+margin:0 0 0 0;
+position:relative;
+top:4px;
+left:5px; 
+cursor: pointer;
+}
+
+
+/*註冊*/
+.register {
+	width: 20%;
+	height: 80%;
+	background: linear-gradient(180deg, #5B5B5B 0%, #E0E0E0 100%);
+	/*border: 1px solid black;*/
+	border-radius: 20px;
+	margin: 5% 40%;
+	z-index: 3;
+	display: none;
+	position: fixed;
+	opacity:1;
+	font-family: 'Gluten', cursive;
+
+	}
+
+.register_1 {
+	width: 95%;
+	height: 98.5%;
+	background:linear-gradient(180deg, #9D9D9D 0%, #E0E0E0 100%);
+	/*border: 1px solid black;*/
+	border-radius: 20px;
+	margin: 1% auto;
+	
+}
+
+.register_2 {
+	margin: 3% 3% 3% 3%;
+	font-size: 1.4em
+}
+
+.register_2 input{
+border-radius:10px 10px 10px 10px;
+}
+
+.gender {
+	font-size: 0.7em;
+}
+
+.submit_1 {
+	width: 10px;
+	height: 10px;
+	margin: 0% 0% 0% 40%;
+}
+
+.register_button{
+	position:absolute;
+	bottom:2%;
+	left:45%;	
+	
+}
+
+
+
+/*登入*/
+.outer {
+	width: 20%;
+	height: 45%;
+	background: linear-gradient(180deg, #5B5B5B 0%, #E0E0E0 100%);
+	/*border: 1px solid black;*/
+	border-radius: 25px;
+	margin: 10% 40%;
+	position: fixed;
+	display: none;
+	z-index: 3;
+	opacity: 1;
+	font-family: 'Gluten', cursive;
+
+}
+
+
+
+.login {
+	width: 95%;
+	height: 96%;
+	background:linear-gradient(180deg, #9D9D9D 0%, #E0E0E0 100%);
+	/*border: 1px solid black;*/
+	border-radius: 25px;
+	margin: 1% auto;
+	
+}
+
+.login_1 {
+	margin: 3% 3% 3% 3%;
+	font-size: 1.5em
+}
+.login_1 input{
+border-radius:10px 10px 10px 10px;
+}
+.show{
+	width:30px;
+	vertical-align: middle;
+}
+
+
+.login_button {
+	position:fixed;
+	text-align: center;
+	font-size: 0.8em;
+	bottom:35%;
+	left:49%;
+}
+
+.href_forgotPassword {
+	font-size: 0.7em;
+}
+
+.menber img{
+	vertical-align: middle;
+	float:center;
+	position:relative;
+	left:-7%;
+	bottom:10%;
+	width:50px;
+	height:50px;	
+	margin:0% 5% 0% 5%;
+	
+}
+
+.menber img:hover{
+   transform: scale(1.2,1.2);
+   transition: all 1s;
+	
+}
+
+.Search img{
+	float:left;
+	position:relative;
+	left:8%;
+	width:50px;
+	height:50px;	
+	margin:0.5% 0% 0% 0%;
+	opacity:0.5; 
+	
+}
+
+.Search img:hover{
+   transform: scale(1.2,1.2);
+   opacity: 1.0;
+   transition: all 1s;
+}
+
+.search_jump{
+	width:210px;
+	height:30px;
+	position:fixed;
+	margin:0.5% 0% 0% 10%;
+	z-index:6; 
+	background-color:#7D7D7D  ;
+	border-radius: 10px 10px 10px 10px;
+	display:none; 
+	opacity: 0.5;
+	
+		 
+}
+
+.search_jump:hover{
+   opacity: 1.0;
+   transition: all 1s;
+}
+
+
+.search_jump input{
+	width:25px;
+	height:25px;
+	position:relative;
+	vertical-align:middle;  
+	top:10%;
+	left:2%;
+	margin:1.5% 0 0 0 ;
+}
+
+.search_text{
+	width:100px;
+	height:25px;
+}
+
+
+.shopcar img{
+	float:left;
+	position:relative;
+	left:28%;
+	width:60px;
+	height:60px;	
+	margin:0.6% 0% 0% 0%;
+	opacity:1; 
+	transition: all 1s;
+}
+
+/*自訂動畫*/
+@keyframes swing{
+	10%{transform:translateX(5px);}
+	20%{transform:translateX(-5px);}
+	40%{transform:translateY(10px);}
+	50%{transform:translateY(-10px);}
+	65%{transform:rotate(45deg)}
+	80%{transform:rotate(0deg)}
+	80%{transform:rotate(-45deg)}
+	100%{transform:translateX(0px);}
+	
+}
+
+.shopcar img:hover{
+	animation:swing 2s 1;
+	
+}
+
+.about img{
+	float:right;
+	position:relative;
+	right:26%;
+	width:60px;
+	height:60px;	
+	margin:0.2% 0% 0% 0%;
+	opacity:1;
+	transition: all 1s; 
+	}
+	
+.about img:hover{
+   transform: scale(1.2,1.2);
+   transition: all 1s;
+   }
+   
+.volunteer img{
+	float:left;
+	position:relative;
+	left:16%;
+	width:60px;
+	height:60px;	
+	margin:0.2% 0% 0% 0%;
+	opacity:1; 
+	transition: all 1s;
+}   
+   
+ .volunteer img:hover{
+   transform: scale(1.2,1.2);
+   transition: all 1s;
+   }  
+   
+
+   
+
+@media screen and (max-width: 720px){
+	.main img{
+	object-fit:cover;
+	}
+	
+	
+	.function {
+	width:10%;
+	height:90.5%;
+	float: right;
+	background-color: #9D9D9D;
+	opacity: 0.5;
+	position: fixed;
+	top:0%;
+	left:0.1%;
+	color:black;
+	font-size:2em; 
+	transition: all 2s;
+	margin:0%;
+	z-index:2;
+	display:flex;
+	flex-direction: column-reverse;
+	border-radius: 0% 30% 30% 0% ;
+	}
+
+	.menber{
+	font-size:0.65em;
+	position:relative; 
+	top:-60%;
+	left:20%
+	
+	}
+	
+	.menber img{
+	margin:0 0% 100% 0;
+	position:relative;
+	top:90%; 
+	
+}
+
+.Search img{
+	position:relative;
+	bottom:-200%;
+	left:10%;
+	
+}
+
+	.logo{
+	margin:0%;
+	position:relative;
+	left:-2%;
+	width:100%;
+	height:100%;
+	top:20%;
+	}
+
+	.outer {
+	width: 50%;
+	height: 45%;
+	margin: 15% 30%;
+	position: fixed;
+	display: none;
+	z-index: 3;
+	opacity: 1;
+	font-size: 0.9em
+	}
+	
+	.login_button{
+	position: fixed;
+	top:55%; 
+	left:52%;
+	
+	}
+
+	.register {
+	width: 50%;
+	height: 85%;
+	margin: 10% 30%;
+	z-index: 3;
+	display: none;
+	position: fixed;
+	font-size: 0.9em
+	
+	}
+	
+	.register_button{
+	position: fixed;
+	bottom:5.5%; 
+	left:52%;
+	}
+
+
+	.information{
+	z-index:3;
+	font-size:1.2em; 
+	}	
+
+	.slide{
+	margin:0% 0 0 0%;
+	width:93.4vh;
+	}
+	
+	.member_icon{
+	position: absolute;
+	left:5%;
+	bottom:49%;	
+	}
+	
+	.logout img{
+	position: absolute;
+	left:10%;
+	top:11%
+	}
+	
+	.search_jump{
+	position:fixed;
+	bottom:21%;  
+	left:-3%;
+	
+	}
+	
+	.shopcar img{
+	left:10%;
+	}
+	
+	.about img{
+	position:fixed;
+	left:1%;
+	top:11%;
+
+	}
+	
+	.volunteer img{
+	position:fixed;
+	left:1%;
+	opacity:1; 
+	bottom:28%; 
+}   
+	
+	
+}
+
+
+
+
+
+
+
+
+
